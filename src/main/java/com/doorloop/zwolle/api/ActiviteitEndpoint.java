@@ -29,7 +29,7 @@ public class ActiviteitEndpoint {
 
     @PostMapping("/activiteit")
     public void saveActiviteit(@RequestBody Activiteit activiteit){
-        System.out.println(activiteit.getCalPerHour());
+        //System.out.println(activiteit.getCalPerHour());
         activiteitService.saveActiviteit(activiteit);
         System.out.println();
     }
