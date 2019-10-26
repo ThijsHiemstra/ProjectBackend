@@ -8,6 +8,8 @@ public class ZwolleApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ZwolleApplication.class, args);
+
+		System.out.println("hoi");
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.doorloop.zwolle.domain;
 
+import org.springframework.http.converter.json.GsonBuilderUtils;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -73,4 +75,6 @@ public class Activiteit {
     public void setCalBurned(float calBurned) {
         CalBurned = calBurned;
     }
+
+
 }

@@ -25,8 +25,8 @@ public class ActiviteitService {
 
     }
 
-    public void saveActiviteit(Activiteit activiteit){
+        public void saveActiviteit(Activiteit activiteit){
         activitieitRepository.save(activiteit);
-    }
+        }
 
 }
