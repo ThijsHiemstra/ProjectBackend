@@ -6,19 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/login")
 public class UserEndpoint {
 
     @Autowired
     UserService userService;
 
-    @GetMapping("/{userId}")
-    public String User(@PathVariable long Id) {
-    return "Handled HTTP Get User Request";
+    @GetMapping("/login")
+    public User workout1(){
+        System.out.println("Welkom User");
+        User gebruiker1 = new User();
+
+        gebruiker1.setUserFirstName("sample");
+        gebruiker1.setUserLastName("sample");
+        gebruiker1.setUserHeight(00);
+        gebruiker1.setUserWeight(00);
+
+        return  gebruiker1;
+
     }
 
 
-    @PostMapping
+    @PostMapping("/login")
     public void createUser(@RequestBody User user){
         userService.saveUser(user);
     }

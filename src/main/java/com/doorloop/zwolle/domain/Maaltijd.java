@@ -1,6 +1,4 @@
-
 package com.doorloop.zwolle.domain;
-
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,20 +6,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Sessie {
+public class Maaltijd {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    long id;
+    long Id;
     int Dag;
-    float CalVerbrand;
+    int IntakeTotaal;
 
     public long getId() {
-        return id;
+        return Id;
     }
 
     public void setId(long id) {
-        this.id = id;
+        Id = id;
     }
 
     public int getDag() {
@@ -32,12 +30,11 @@ public class Sessie {
         Dag = dag;
     }
 
-    public float getCalVerbrand() {
-        return CalVerbrand;
+    public int getIntakeTotaal() {
+        return IntakeTotaal;
     }
 
-    public void setCalVerbrand(float calVerbrand) {
-        CalVerbrand = calVerbrand;
+    public void setIntakeTotaal(int intakeTotaal) {
+        IntakeTotaal = intakeTotaal;
     }
 }
-
