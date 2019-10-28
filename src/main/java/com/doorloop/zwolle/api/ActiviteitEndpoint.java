@@ -15,16 +15,9 @@ public class ActiviteitEndpoint {
     ActiviteitService activiteitService;
 
     @GetMapping("/activiteit")
-    public Activiteit workout1(){
-        System.out.println("Welcome to workout #1");
-        Activiteit Act1 = new Activiteit();
-        Act1.setTypeOfExercise(null);
-        Act1.setCalPerHour(0);
-        Act1.setDurationOfExercise(0);
-        Act1.setSuccess(false);
-        Act1.setTimeIfFail(0);
-        Act1.setCalBurned(0);
-        return  Act1;
+    public Iterable<Activiteit> geefActiviteit(){
+
+        return  activiteitService.geefMeAlleActiviteiten();
     }
 
     @PostMapping("/activiteit")
@@ -34,3 +27,22 @@ public class ActiviteitEndpoint {
         System.out.println();
     }
 }
+
+
+
+
+
+
+
+
+/*
+ System.out.println("Welcome to workout #1");
+        */
+/*
+        Activiteit Act1 = new Activiteit();
+        Act1.setTypeOfExercise(null);
+        Act1.setCalPerHour(0);
+        Act1.setDurationOfExercise(0);
+        Act1.setSuccess(false);
+        Act1.setTimeIfFail(0);
+        Act1.setCalBurned(0);*/

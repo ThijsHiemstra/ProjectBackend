@@ -13,14 +13,6 @@ public class ActiviteitService {
 
     public Iterable<Activiteit> geefMeAlleActiviteiten(){
 
-        Activiteit Act1 = new Activiteit();
-        Act1.setTypeOfExercise(null);
-        Act1.setCalPerHour(0);
-        Act1.setDurationOfExercise(0);
-        Act1.setSuccess(false);
-        Act1.setTimeIfFail(0);
-        Act1.setCalBurned(0);
-
         return activitieitRepository.findAll();
 
     }
@@ -30,3 +22,23 @@ public class ActiviteitService {
         }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+        Activiteit Act1 = new Activiteit();
+        Act1.setTypeOfExercise(null);
+        Act1.setCalPerHour(0);
+        Act1.setDurationOfExercise(0);
+        Act1.setSuccess(false);
+        Act1.setTimeIfFail(0);
+        Act1.setCalBurned(0);*/
