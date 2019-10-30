@@ -13,22 +13,17 @@ public class UserEndpoint {
     UserService userService;
 
     @GetMapping("/login")
-    public User workout1(){
-        System.out.println("Welkom User");
-        User gebruiker1 = new User();
+    public Iterable<User> geefUser(){
 
-        gebruiker1.setUserFirstName("sample");
-        gebruiker1.setUserLastName("sample");
-        gebruiker1.setUserHeight(00);
-        gebruiker1.setUserWeight(00);
 
-        return  gebruiker1;
+        return  userService.geefMeAlleUsers();
 
     }
 
 
     @PostMapping("/login")
     public void createUser(@RequestBody User user){
+
         userService.saveUser(user);
     }
 

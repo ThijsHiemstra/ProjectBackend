@@ -10,6 +10,11 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
+    public Iterable<User> geefMeAlleUsers() {
+
+        return userRepository.findAll();
+    }
+
     public void saveUser(User user){
         userRepository.save(user);
     }
